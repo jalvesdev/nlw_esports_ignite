@@ -1,22 +1,12 @@
-interface ButtonProps{
-  title: string;
-}
+import './styles/main.css';
 
-function Button(props:ButtonProps) {
-  return (
-    <button>
-      {props.title}
-    </button>
-  )
-}
+import logoImg from './assets/logo-nlw-esports.svg'
 
 function App() {
   return (
-    <div>
-      <Button title="send 1"/>
-      <Button title="send 2"/>
-      <Button title="send 3"/>
-      <Button title="Hello world"/>
+    <div className="max-w-[1344px] mx-auto flex flex-col items-center">
+      <img src={logoImg} alt="" />
+
     </div>
   )
 }

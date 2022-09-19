@@ -11,7 +11,7 @@ import {
 import { Background } from './src/components/Background';
 import { Loading } from './src/components/Loading'
 
-import { Home } from './src/Screens/Home'
+import { Routes } from './src/routes'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,22 +20,15 @@ export default function App() {
     Inter_700Bold,
     Inter_900Black
   })
-
-
-
   return (
-    
       <Background>
-        <ScrollView>
         <StatusBar
           barStyle="light-content" 
           backgroundColor="transparent"
           translucent
           />
               
-        {fontsLoaded ? <Home /> : <Loading />}
-
-        </ScrollView>
+        {fontsLoaded ? <Routes /> : <Loading />}
       </Background>
     
   )
